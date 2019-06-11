@@ -11,12 +11,19 @@
 
   <body>
 
-    <p>
-      <%= link_to 'Home', root_path %> |
-      <%= link_to pluralize(current_cart.items_count, 'item'), cart_path %>
-    </p>
+    <%= render 'layouts/navigation' %>
 
-    <hr />
+
+
+
+    <!-- <hr /> -->
+
+    <% if notice %>
+  <p class="alert alert-success"><%= notice %></p>
+<% end %>
+<% if alert %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %>
     <%= yield %>
   </body>
 </html>
