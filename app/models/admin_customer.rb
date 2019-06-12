@@ -1,0 +1,4 @@
+class AdminCustomer < Customer
+
+
+end
